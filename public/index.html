@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Unkempt&display=swap" rel="stylesheet">
+    <title>blackjack</title>
+</head>
+<body>
+    <div class="loading-page">
+        <img class='loadingGif' src='images/loading.gif'>
+    </div>
+     <!-- At the end of yhr turn show the score screen -->
+     <div class="score">
+        <div class="score-text">Nagy budos lofasz</div>
+    </div>
+    <div class="new-game-request hideItem">
+        <p><strong id="player-name"></strong> wants to play with you. </p>
+        <div class="buttons">
+            <button class="button" id="accept">Accept</button>
+            <button class="button" id="refuse">Refuse</button>
+        </div>
+    </div>
+    <div class="starting-page">
+        <div id="user-list">
+            <div class="game-title">Special BlackJack</div>
+            <div class="set-user-name">
+                <input class="set-user-name-input" type="text" placeholder="Enter Your Name:">
+                <button class="set-user-name-input set-user-name-button">Submit</button>
+            </div>
+            <div id="output" class="hideUsersList"></div>
+        </div>
+    </div>
+
+    <div id="game-space">
+
+        <!-- Full Screen Button -->
+        <img src="images/maximize.png" id="full-screen-button"></img>
+
+       
+
+        <div class="board">
+             <!-- Enemy player name bar -->
+            <div class="enemyPlayerName" id="enemyName"></div>
+            <!-- The Game Board -->
+           
+            <div class="cards">
+                <table class="redTable">
+                    <thead>
+                    <tr>
+                    <th id="enemyName_redTable"></th>
+                    <th id="myName_redTable"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td id="enemy-winned-rounds"></td>
+                    <td id="my-winned-rounds"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- help icon in the right-top corner -->
+                <a href="help.html" target="_blank" class="helpIcon">
+                    <i class="fa fa-question-circle fa-3x" aria-hidden="true"></i>
+                </a>
+                <!-- Table with the ennemy current points -->
+                <div class="enemyPoints">
+                    Enemy Points:
+                    <p style="margin: 0px"> 0 + ? / 21</p>
+                </div>
+                <div class="countDown">
+                    <img class="countDown-gif" src="images/count_down.gif" alt="">
+                    <div class="countDown-number"></div>
+                </div>
+                <!-- The Cards of the enemy -->
+                <div class="upLine">
+                    <div class="images">
+                        <!-- a concretcard of the enemy -->
+                    </div>
+                </div>
+                <!-- The Special-Cards of the enemy -->
+                <div class="middleUpLine">
+                <!-- enemy active Special Cards -->
+                </div>
+                <!-- The buttons on the middle of the board -->
+                <div class="middleButtons">
+                    <div>
+                        <button class="middleButton middleHover" id="keep-current-hand">Keep Current Hand</button>
+                    </div>
+                    <div>
+                        <button class="middleButton middleHover" id="draw-new-card">Draw New Card</button>
+                    </div>
+                </div>
+                <!-- Your Special-Cards -->
+                <div class="middleDownLine">
+                <!-- //my active Special Cards -->
+                </div>
+                <div class="downLine">
+                </div>
+                <div class="myPoints">
+                    Your Points:
+                    <p style="margin: 0px"> 0 / 21</p>
+                </div>
+                <button class="surrButton">Surrender</button>
+                <div class="specialCardsDropdown">
+                    <button onclick="show_hide()" class="specialCardButton">Special Cards</button>
+                    <div class="scrollArea" id="drop-content" style="display:none">
+
+                    </div>
+                </div>
+                <button class="useSpecialCardButton" style="display:none" id="use-button">Use</button>
+            </div>
+            <div class="myPlayerName" id="myName"></div>
+        </div>
+    </div>
+                   
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+    <script src="game.js"></script>
+    <script src="specialCards.js"></script>
+
+</body>
+</html>

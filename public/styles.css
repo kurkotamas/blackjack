@@ -1,0 +1,548 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Unkempt', cursive;
+  font-size: 1.5rem;
+  background: url('images/background5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+button {
+  font-family: 'Unkempt', cursive;
+  font-size: 1.5rem;
+}
+.new-game-request {
+  display: flex;
+  position: absolute;
+  top: 0;
+  background: #A40808;
+  width: 100%;
+  transition: all 1s;
+  z-index: 3;
+}
+.new-game-request p {
+  padding-left: 20px;
+}
+.buttons {
+  position: absolute;
+  height: 20px;
+  margin: 13px;
+  right: 0;
+}
+
+#user-list {
+  display: block;
+  margin-top: 195px;
+  text-align: center;
+
+}
+.showItem {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.hideItem {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.hideUsersList {
+  /* visibility: hidden !important; */
+  height: 0 !important;
+  padding: 0 !important;
+}
+
+.starting-page {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: url('images/background6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  z-index: 2;
+}
+.loading-page{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: rgb(226, 222, 222);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.loadingGif{
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+.game-title{
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.781);
+  background: rgba(0,0,0, 0.55);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.9);
+}
+
+.enemyPoints{
+  border: 2px solid #A40808;
+  background: #EEE7DB;
+  width: 125px;
+  height: 50px;
+  text-align-last: center;
+  font-size: 20px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  padding: 0.5rem;
+}
+.myPoints{
+  border: 2px solid #A40808;
+  background: #EEE7DB;
+  width: 125px;
+  height: 50px;
+  text-align-last: center;
+  font-size: 20px;
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+  padding: 0.5rem;
+}
+
+.upLine{
+  right: 140px;
+  top: 12px;
+  display: flex;
+  position: absolute;
+}
+.downLine{
+  left: 140px;
+  bottom: 12px;
+  display: flex;
+  position: absolute;
+}
+.middleUpLine{
+  right: 390px;
+  top: 170px;
+  display: flex;
+  position: absolute;
+}
+.middleDownLine{
+  margin-right: 35px;
+  left: 225px;
+  bottom: 170px;
+  display: flex;
+  position: absolute;
+}
+.middleButtons{
+  display: flex;
+  position: absolute;
+  left: 320px;
+  bottom: 267px;
+}
+.middleButton {
+-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+box-shadow:inset 0px 34px 0px -15px #b54b3a;
+background-color:#a73f2d;
+border:1px solid #42321c;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:15px;
+font-weight:bold;
+padding:17px 42px;
+text-decoration:none;
+  text-shadow:0px 1px 0px #7a2a1d;
+  margin: 15px;
+}
+
+.middleHover:hover {
+  background-color:#b34332;
+}
+.middleButton:active{
+  position: relative;
+  top: 1px;
+}
+.images{
+  border: 1.5px solid black;
+  width: 103px;
+  height: 134px;
+  overflow: hidden;
+  margin-left: 23px;
+
+}
+.images img {
+  display: block;
+  margin: -28px -24px;
+  width: 150px;
+  height: 190px;
+}
+
+.helpIcon{
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  color: black
+}
+.surrButton {
+  position: absolute;
+  bottom: 28px;
+  right: 235px;
+  -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+  background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+  background-color:#c62d1f;
+  -moz-border-radius:18px;
+  -webkit-border-radius:18px;
+  border-radius:18px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+}
+.surrButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
+  background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+  background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+  background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+  background:-ms-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+  background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
+  background-color:#f24437;
+}
+.surrButton:active {
+  position: absolute;
+  bottom: 26px;
+  right: 233px;
+}
+.card{
+  display: flex;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.enemyPlayerName{
+  font-size: 1.7rem;
+  height: 40px;
+  text-align-last: center;
+  position: relative;
+  color: aliceblue;
+  background: black;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.myPlayerName{
+  font-size: 1.7rem;
+  height: 40px;
+  text-align-last: center;
+  position: relative;
+  color: aliceblue;
+  background: black;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.cards {
+  background: rgb(112, 184, 184);
+  padding: 8px;
+  display: flex;
+  height: 600px;
+  position: relative;
+}
+.board {
+  margin: 0 auto;
+  width: 1300px;
+  margin-top: 60px;
+}
+.specCards{
+  background: rgb(112, 184, 184);
+  padding: 8px;
+  display: flex;
+  height: 1400px;
+  position: relative;
+}
+.specCardsBoard{
+  background: black;
+  border: 5px solid black;
+  margin: 0 auto;
+  font-size: 3rem;
+  width: 1300px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+.specCardBoardTitle{
+  color: aliceblue;
+  padding: 0.8rem;
+}
+.specCard{
+  background: #FFF;
+  border: 3px solid black;
+  height: 55px;
+  margin: auto 0;
+  margin-right: 1.5rem;
+  /* transition: all 1.5s ease-in; */
+}
+.row{
+  display: block;
+  position: absolute;
+  margin: 8px;
+}
+.explanation{
+  width: 1197px;
+  display: flex;
+  margin: 1rem;
+  border-bottom: 2px solid black;
+  padding: 1rem;
+}
+.explanation-text{
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: black;
+}
+#output {
+  background: rgba(0, 0, 0, 0.7);
+  width: 563px;
+  color: white;
+  margin: 0 auto;
+  height: 200px;
+  /* padding: 2rem; */
+  overflow: auto;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.select-button {
+  cursor: pointer;
+}
+.select-button:hover {
+  color: orange;
+}
+table.redTable {
+  border: 2px solid #A40808;
+  background-color: #EEE7DB;
+  width: 15%;
+  height: 15%;
+  text-align: center;
+  border-collapse: collapse;
+  position: absolute;
+  left: 190px;
+}
+table.redTable td, table.redTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.redTable tbody td {
+  font-size: 2rem;
+}
+table.redTable tr:nth-child(even) {
+  background: #F5C8BF;
+}
+table.redTable thead {
+  background: #A40808;
+}
+table.redTable thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #A40808;
+  width: 80px;
+}
+.disableMiddleButton {
+  -moz-box-shadow:inset 0px 34px 0px -15px #5f5654;
+  -webkit-box-shadow:inset 0px 34px 0px -15px #272423;
+  box-shadow:inset 0px 34px 0px -15px #272423;
+  background-color:#0c0a0a;
+  color: grey;
+}
+.specialCardsDropdown{
+  position: absolute;
+  right: 75px;
+  bottom: 400px;
+  width: 180px;
+  height: 40px;
+  display: inline-block;
+}
+.specialCardButton{
+  box-shadow:inset 0px 34px 0px -15px #b54b3a;
+  background-color:#a73f2d;
+  border:2px solid #42321c;
+  color: white;
+  width: 154px;
+  height: 40px;
+  font-size: 20px;
+}
+.useSpecialCardButton{
+  box-shadow:inset 0px 34px 0px -15px #b54b3a;
+  background-color:#a73f2d;
+  color: white;
+  width: 154px;
+  height: 30px;
+  font-size: 20px;
+  right: 101px;
+  bottom: 169px;
+  position: absolute;
+  border: 3px solid rgba(0,0,0,0.5);
+}
+.scrollArea{
+  position: absolute;
+  z-index: 1;
+  overflow: auto;
+  height: 200px;
+  width: 154px;
+  background: rgba(0,0,0,0.5);
+}
+.scrollArea a{
+  font-size:20px;
+  color: block;
+  display: block;
+  margin-top: 2px;
+  width: 154px;
+}
+.specCardOnDropDown{
+background: #FFF;
+border: 3px solid black;
+height: 45px;
+margin: 6px;
+}
+.greenBackGroundOnSpecialCard{
+  border: 3px solid greenyellow;
+}
+.score {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: rgb(226, 222, 222);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  /* z-index: 9; */
+}
+#game-space {
+  position: relative;
+}
+.score-text {
+  position: absolute;
+  font-size: 7rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.victory{
+  color: green;
+}
+.defeat{
+  color: red;
+}
+.draw{
+  color: blue;
+}
+.gameOver{
+  color: yellow;
+}
+.game-header {
+  position: relative;
+}
+.timer {
+  position: absolute;
+  right: 0;
+  color: red;
+  z-index: 1;
+}
+.countDown {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 80px;
+  height: 80px;
+  top: 75px;
+  left: 17px;
+
+}
+.countDown-number {
+  position: absolute;
+  font-size: 35px;
+}
+
+.colorCountDown-number{
+  color: #A40808;
+}
+
+.countDown-gif {
+  width: 100%;
+  height: 100%;
+}
+#full-screen-button {
+  position: fixed;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+  transition: all 0.25s ease-in-out
+}
+
+#full-screen-button:hover {
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255);
+}
+.set-user-name {
+  display: flex;
+  background: #0c0a0a;
+  width: 500px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 50px;
+  align-items: center;
+
+}
+
+.red{
+  border: 2px solid #A40808;
+}
+.red::placeholder {
+  color: #A40808;
+}
+.set-user-name-input {
+  padding: 0.4rem;
+  background: #272423;
+  color: white;
+  font-size: 0.8rem;
+  width: 150px;
+  border-radius: 5px;
+}
+.set-user-name-button {
+  margin-left: 3px;
+}
